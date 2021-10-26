@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CircuitBreaker.CircuitBreakerWithStateMachine;
+using System;
 
 namespace CircuitBreaker
 {
@@ -6,7 +7,7 @@ namespace CircuitBreaker
     {
         static void Main(string[] args)
         {
-            var breaker = new CircuitBreaker();
+            var breaker = new CircuitBreakerContext();
             try
             {
                 breaker.ExecuteAction(() =>

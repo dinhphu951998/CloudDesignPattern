@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace CircuitBreaker
 {
-    public class CircuitBreaker
+    public class CircuitBreaker : ICircuitBreaker
     {
         private readonly ICircuitBreakerStateStore stateStore = CircuitBreakerStateStoreFactory.GetCircuitBreakerStateStore();
         private readonly object halfOpenSyncObject = new object();
